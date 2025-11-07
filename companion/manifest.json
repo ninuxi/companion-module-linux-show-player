@@ -1,0 +1,26 @@
+{
+  "id": "linux-show-player",
+  "name": "Linux Show Player",
+  "shortname": "lsp",
+  "description": "Control Linux Show Player via OSC",
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "connection",
+  "legacyIds": [],
+  "repository": "https://github.com/FrancescoCeruti/linux-show-player",
+  "bugs": "https://github.com/FrancescoCeruti/linux-show-player/issues",
+  "maintainers": [
+    {
+      "name": "Companion Module Developer"
+    }
+  ],
+  "runtime": {
+    "type": "node18",
+    "api": "nodejs-ipc",
+    "apiVersion": "1.13.0",
+    "entrypoint": "../main.js"
+  },
+  "manufacturer": "Linux Show Player",
+  "products": ["Linux Show Player"],
+  "keywords": ["osc", "show control", "linux"]
+}

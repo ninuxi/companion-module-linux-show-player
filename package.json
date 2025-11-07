@@ -1,0 +1,17 @@
+{
+  "name": "linux-show-player",
+  "version": "1.0.0",
+  "description": "Companion module for Linux Show Player",
+  "main": "main.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "keywords": ["companion", "linux-show-player", "osc"],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "@companion-module/base": "^1.13.4",
+    "typescript": "^5.0.0"
+  }
+}
