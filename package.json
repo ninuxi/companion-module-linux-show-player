@@ -33,7 +33,8 @@
     "clean": "rm -rf dist",
     "build": "npm run clean && tsc",
     "dev": "tsc --watch",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "scope:migrate": "node tools/scope_migrate.mjs"
   },
   "engines": {
     "node": ">=18"
