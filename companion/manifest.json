@@ -7,18 +7,16 @@
   "license": "MIT",
   "type": "connection",
   "legacyIds": [],
-  "repository": "https://github.com/FrancescoCeruti/linux-show-player",
-  "bugs": "https://github.com/FrancescoCeruti/linux-show-player/issues",
+  "repository": "https://github.com/ninuxi/companion-module-linux-show-player",
+  "bugs": "https://github.com/ninuxi/companion-module-linux-show-player/issues",
   "maintainers": [
-    {
-      "name": "Companion Module Developer"
-    }
+    { "name": "ninuxi" }
   ],
   "runtime": {
     "type": "node18",
     "api": "nodejs-ipc",
     "apiVersion": "1.13.0",
-    "entrypoint": "../main.js"
+    "entrypoint": "../dist/main.js"
   },
   "manufacturer": "Linux Show Player",
   "products": ["Linux Show Player"],

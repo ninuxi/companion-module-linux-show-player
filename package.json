@@ -1,17 +1,47 @@
 {
-  "name": "linux-show-player",
+  "name": "companion-module-linux-show-player",
   "version": "1.0.0",
-  "description": "Companion module for Linux Show Player",
-  "main": "main.js",
-  "scripts": {
-    "build": "tsc",
-    "dev": "tsc --watch"
-  },
-  "keywords": ["companion", "linux-show-player", "osc"],
-  "author": "Your Name",
+  "description": "Bitfocus Companion module to control Linux Show Player via OSC (start/stop cues, play/pause, navigation).",
   "license": "MIT",
+  "author": "ninuxi",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ninuxi/companion-module-linux-show-player.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ninuxi/companion-module-linux-show-player/issues"
+  },
+  "homepage": "https://github.com/ninuxi/companion-module-linux-show-player#readme",
+  "keywords": [
+    "companion",
+    "companion-module",
+    "linux-show-player",
+    "lsp",
+    "osc",
+    "show-control"
+  ],
+  "type": "commonjs",
+  "main": "dist/main.js",
+  "types": "dist/main.d.ts",
+  "files": [
+    "dist/**/*",
+    "companion/**/*",
+    "README.md",
+    "LICENSE.md"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "npm run clean && tsc",
+    "dev": "tsc --watch",
+    "prepare": "npm run build"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@companion-module/base": "^1.13.4"
+  },
   "devDependencies": {
-    "@companion-module/base": "^1.13.4",
     "typescript": "^5.0.0"
   }
 }
