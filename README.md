@@ -12,7 +12,10 @@ Control [Linux Show Player](https://github.com/FrancescoCeruti/linux-show-player
 
 ## Installation
 
-1. Install this module (when published) from the Companion Module Store OR add the repository to a local dev environment.
+1. Install from the Companion Module Store (after inclusion) OR add via npm:
+	```bash
+	npm install companion-module-linux-show-player
+	```
 2. Add a new instance of "Linux Show Player" in Companion.
 3. Configure Host (IP of the machine running LSP) and Port (default 8000).
 4. Create buttons using the provided actions.
@@ -58,6 +61,8 @@ npm run dev
 This compiles `main.ts` to `dist/main.js` (entrypoint referenced by `companion/manifest.json`).
 
 ## Publish (Maintainer Notes)
+
+Published on npm as: `companion-module-linux-show-player`
 
 1. Update version in `package.json` & `companion/manifest.json`
 2. `npm run build`
