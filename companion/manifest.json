@@ -2,7 +2,7 @@
   "id": "linux-show-player",
   "name": "Linux Show Player",
   "shortname": "lsp",
-  "description": "Control Linux Show Player via OSC",
+  "description": "Control Linux Show Player via OSC (start/stop/pause/resume cue)",
   "version": "1.0.0",
   "license": "MIT",
   "type": "connection",
@@ -20,5 +20,5 @@
   },
   "manufacturer": "Linux Show Player",
   "products": ["Linux Show Player"],
-  "keywords": ["osc", "show control", "linux"]
+  "keywords": ["osc", "show control", "linux", "cue", "showplayer"]
 }

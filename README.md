@@ -1,75 +1,45 @@
-# Companion Module: Linux Show Player (LSP)
+## Companion Module: Linux Show Player
 
-Control [Linux Show Player](https://github.com/FrancescoCeruti/linux-show-player) from a Bitfocus Companion button surface via OSC.
+[![npm version](https://img.shields.io/npm/v/companion-module-linux-show-player.svg)](https://www.npmjs.com/package/companion-module-linux-show-player)
 
-## Features
+Control [Linux Show Player](https://github.com/FrancescoCeruti/linux-show-player) from Bitfocus Companion via OSC.
 
-* Trigger a specific cue by number
-* Play/Pause current cue
-* Stop current cue
-* Next / Previous cue navigation
-* Designed for quick expansion (add more OSC paths easily)
+### Features
+- Start/Stop/Pause/Resume cue by number
+- Simple configuration: Host/IP and Port (default 8000)
 
-## Installation
+### Installation
+```bash
+npm install companion-module-linux-show-player
+```
+Add a new instance in Companion, configure Host and Port, and create buttons using the provided actions.
 
-1. Install from the Companion Module Store (after inclusion) OR add via npm:
-	```bash
-	npm install companion-module-linux-show-player
-	```
-2. Add a new instance of "Linux Show Player" in Companion.
-3. Configure Host (IP of the machine running LSP) and Port (default 8000).
-4. Create buttons using the provided actions.
-
-## Configuration Fields
-
+### Configuration
 | Field | Description |
 |-------|-------------|
-| Host  | IP or hostname where Linux Show Player runs |
+| Host  | IP or hostname of LSP |
 | Port  | OSC UDP port (default 8000) |
 
-Ensure that each cue in LSP has OSC enabled (Acquire checkbox) and that LSP is set to listen on the same port.
+**Note:** If Companion and LSP sono sulla stessa macchina, la porta 8000 può andare in conflitto. Modifica la porta in LSP se necessario.
 
-## Provided Actions
+### Actions
+| Action      | Description                                 |
+|-------------|---------------------------------------------|
+| Start Cue   | `/cue/<n>/start` - Start cue by number      |
+| Stop Cue    | `/cue/<n>/stop` - Stop cue by number        |
+| Pause Cue   | `/cue/<n>/pause` - Pause cue by number      |
+| Resume Cue  | `/cue/<n>/resume` - Resume cue by number    |
 
-| Action | Description |
-|--------|-------------|
-| Trigger Cue | Start a cue by number (sends `/cue/<n>/start`) |
-| Play/Pause | Toggle playback of current cue |
-| Stop | Stop current playing cue |
-| Next Cue | Advance to next cue |
-| Previous Cue | Go back to previous cue |
-
-## Roadmap / Ideas
-
-* Feedback for current / selected cue
-* Cue list polling & dynamic variables
-* Labels reflecting cue names
-
-## Development
-
+### Development
 ```bash
 npm install
 npm run build
 ```
-
-During development:
-
+For local dev:
 ```bash
 npm run dev
 ```
 
-This compiles `main.ts` to `dist/main.js` (entrypoint referenced by `companion/manifest.json`).
-
-## Publish (Maintainer Notes)
-
-Published on npm as: `companion-module-linux-show-player`
-
-1. Update version in `package.json` & `companion/manifest.json`
-2. `npm run build`
-3. `git commit -am "release: vX.Y.Z"`
-4. `git tag vX.Y.Z && git push --tags`
-5. `npm publish`
-
-## License
-
+### License
 MIT © 2025 ninuxi
+* Cue list polling & dynamic variables
