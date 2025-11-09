@@ -17,7 +17,6 @@ jobs:
       - run: npm ci
       - run: npm run build
       - name: Publish
-        if: secrets.NPM_TOKEN != ''
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npm publish
