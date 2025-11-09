@@ -6,7 +6,7 @@ Control [Linux Show Player](https://github.com/FrancescoCeruti/linux-show-player
 
 ### Features
 - Start/Stop/Pause/Resume cue by number
-- Simple configuration: Host/IP and Port (default 8000)
+- Simple configuration: Host/IP and Port (default 9999)
 
 ### Installation
 ```bash
@@ -18,7 +18,7 @@ Add a new instance in Companion, configure Host and Port, and create buttons usi
 | Field | Description |
 |-------|-------------|
 | Host  | IP or hostname of LSP |
-| Port  | OSC UDP port (default 8000) |
+| Port  | OSC UDP port (default 9999) |
 
 **Note:** The default OSC port is now 9999 to avoid conflicts with Companion. You can change this in Linux Show Player if needed. If Companion and LSP run on the same machine, make sure the port is not used by other services.
 
