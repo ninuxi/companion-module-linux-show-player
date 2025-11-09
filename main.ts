@@ -1,10 +1,10 @@
 
-import { InstanceBase, runEntrypoint, InstanceStatus, SomeCompanionConfigField } from '@companion-module/base'
+import { InstanceBase, runEntrypoint, InstanceStatus, SomeCompanionConfigField, Regex } from '@companion-module/base'
 
 class LinuxShowPlayerInstance extends InstanceBase<{ host: string; port: number }, {}> {
   config = {
     host: '127.0.0.1',
-    port: 8000,
+    port: 9999,
   }
 
   async init(config: { host: string; port: number }): Promise<void> {
@@ -31,15 +31,15 @@ class LinuxShowPlayerInstance extends InstanceBase<{ host: string; port: number 
         label: 'Target IP',
         width: 8,
         default: '127.0.0.1',
+        regex: Regex.IP,
       },
       {
-        type: 'number',
+        type: 'textinput',
         id: 'port',
         label: 'Target Port',
         width: 4,
-        default: 8000,
-        min: 1,
-        max: 65535,
+        default: '9999',
+        regex: Regex.PORT,
       },
     ]
   }
